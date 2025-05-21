@@ -1,2 +1,2 @@
 # My Portfolio
-Visit my Portfolio site here: [https://github.com/Ruchithamyla/my-portfolio/]
+Visit my Portfolio site here: [https://ruchithamyla.github.io/my-portfolio/]
