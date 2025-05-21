@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 100px;
+      /* Adjusts scroll to avoid header overlap */
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+
+    header h1 {
+      margin: 0 0 10px 0;
+      font-size: 2rem;
+    }
+
+    nav {
+      background-color: #444;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a: hover {
+      text-decoration: underline;
+    }
+
+    section {
+      padding: 60px 20px;
+      min-height: 50vh;
+      text-align: left;
+    }
+
+    #home {
+      background-color: #eaeaea;
+    }
+
+    #about {
+      background-color: #eaeaea;
+    }
+
+    #portfolio {
+      background-color: #eaeaea;
+    }
+
+    #contact {
+      background-color: #eaeaea;
+    }
+
+    #backToTop {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      display: none;
+      background-color: #0c0d0d;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      font-size: 18px;
+      border-radius: 50%;
+      cursor: pointer;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+      z-index: 1000;
+      transition: opacity 0.3s ease;
+    }
+
+    #backToTop:hover {
+      background-color: #0097a7;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Welcome to My Portfolio</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section id="home">
+    <h2>Home</h2>
+    <p>This is the home section with a brief introduction.</p>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>Details about your background, skills, and experience.</p>
+  </section>
+
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <p>Showcase of your projects or achievements.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>Provide a contact form or your contact information.</p>
+  </section>
+
+  <!-- Back to Top Button Script -->
+  <script>
+    const backToTopBtn = document.createElement("button");
+    backToTopBtn.id = "backToTop";
+    backToTopBtn.textContent = "↑";
+    document.body.appendChild(backToTopBtn);
+
+    window.addEventListener("scroll", () => {
+      backToTopBtn.style.display = window.scrollY > 200 ? "block" : "none";
+    });
+
+    backToTopBtn.addEventListener("click", () => {
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    });
+  </script>
+
+</body>
+
+</html>
